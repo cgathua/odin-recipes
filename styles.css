@@ -55,8 +55,11 @@ a:hover {
 section[id="recipes"] .container {
     display: grid;
     gap: 1rem;
-    grid-template-columns: minmax(min-content, 1fr);
-    text-align: center;    
+    grid-template-columns: minmax(min-content, 1fr);   
+}
+
+figure[class="recipe-column"] {
+    text-align: center;
 }
 /* END OF INDEX.HTML STYLING */
 
@@ -76,4 +79,19 @@ section[id="instructions"] .container {
 }
 section[id="directions"] article {
     padding: 1rem 0;
+}
+/* END OF SMALL SCREEN STYLING */
+
+@media screen and (min-width: 1024px) {
+    section[id="recipes"] .container {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    
+    figure[class="recipe-column"] {
+        padding: 1.5rem;
+    }
+    section[id="description"] img {
+        width: 50%;
+    }
+
 }
